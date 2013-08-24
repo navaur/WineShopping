@@ -9,4 +9,5 @@ public interface OrderService {
     List<Offer> searchForProduct(String query);
 
     void confirmOrder(UUID id, String userAuthToken);
+
 }
