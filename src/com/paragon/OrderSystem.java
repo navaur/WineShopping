@@ -67,17 +67,17 @@ public class OrderSystem implements OrderService {
         }
         // processing for variable processing charges
         BigDecimal processingCharges = STANDARD_PROCESSING_CHARGE;
-//        if(timeLag <= TIER1_QUOTE_AGE_MILLIS){
-//            processingCharges  = TIER1_PROCESSING_CHARGE;
-//        }  else if (timeLag<= TIER2_QUOTE_AGE_MILLIS)   {
-//            processingCharges  = TIER2_PROCESSING_CHARGE;
-//            BigDecimal varProcessingCharges = quote.offer.price.multiply(CASE_SIZE).multiply(TIER2_PROCESSING_CHARGE_PERC) ;
-//            if (varProcessingCharges.compareTo(processingCharges)==-1) {
-//                processingCharges = varProcessingCharges;
-//            }
-//        }     else if (timeLag <=TIER3_QUOTE_AGE_MILLIS)    {
-//            processingCharges  = TIER3_PROCESSING_CHARGE;
-//        }
+        if(timeLag <= TIER1_QUOTE_AGE_MILLIS){
+            processingCharges  = TIER1_PROCESSING_CHARGE;
+        }  else if (timeLag<= TIER2_QUOTE_AGE_MILLIS)   {
+            processingCharges  = TIER2_PROCESSING_CHARGE;
+            BigDecimal varProcessingCharges = quote.offer.price.multiply(CASE_SIZE).multiply(TIER2_PROCESSING_CHARGE_PERC) ;
+            if (varProcessingCharges.compareTo(processingCharges)==-1) {
+                processingCharges = varProcessingCharges;
+            }
+        }     else if (timeLag <=TIER3_QUOTE_AGE_MILLIS)    {
+            processingCharges  = TIER3_PROCESSING_CHARGE;
+        }
         return processingCharges;
     }
 
