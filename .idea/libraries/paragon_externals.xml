@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="paragon-externals">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/paragon-externals.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
