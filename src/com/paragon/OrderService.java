@@ -7,6 +7,5 @@ import java.util.UUID;
 
 public interface OrderService {
     List<Offer> searchForProduct(String query);
-
-    void confirmOrder(UUID id, String userAuthToken);
+  void confirmOrder(UUID id, String userAuthToken);
 }
