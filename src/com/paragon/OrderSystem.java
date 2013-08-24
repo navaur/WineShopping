@@ -78,6 +78,7 @@ public class OrderSystem implements OrderService {
         }     else if (timeLag <=TIER3_QUOTE_AGE_MILLIS)    {
             processingCharges  = TIER3_PROCESSING_CHARGE;
         }
+
         return processingCharges;
     }
 
